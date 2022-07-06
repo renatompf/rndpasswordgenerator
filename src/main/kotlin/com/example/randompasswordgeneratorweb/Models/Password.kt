@@ -19,7 +19,8 @@ class Password(
     private val numbers: CharArray = "1234567890".toCharArray()
 
     private val random = SecureRandom.getInstance("SHA1PRNG")
-    fun shuffle(password: String) : String {
+
+    private fun shuffle(password: String) : String {
         val passwordChars = mutableListOf<Char>()
         for (c in password.toCharArray())
             passwordChars.add(c)
